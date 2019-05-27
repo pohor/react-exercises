@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <!-- REACT DOM LIBRARY -->
+   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <title>Styling Components</title>
+</head>
+<body>
+  <div id="app">React has not rendered yet</div>
+
+  <script type="text/babel">
+
+
+        var Red = function() {
+          var RedStyle = {
+            height: 50,
+            width: 150,
+            backgroundColor: "red",
+          }
+          return(
+            <h1 style={RedStyle}>Red</h1>
+          );
+        }
+
+        var Orange = function() {
+          var OrangeStyle = {
+            height: 50,
+            width: 150,
+            backgroundColor: "orange",
+          }
+          return(
+            <h1 style={OrangeStyle}>Orange</h1>
+          );
+        }
+
+        var Yellow = function() {
+          var YellowStyle = {
+            height: 50,
+            width: 150,
+            backgroundColor: "yellow",
+          }
+          return(
+            <h1 style={YellowStyle}>Yellow</h1>
+          );
+        }
+
+        var Green = function() {
+          var GreenStyle = {
+            height: 50,
+            width: 150,
+            backgroundColor: "green",
+          }
+          return(
+            <h1 style={GreenStyle}>Green</h1>
+          );
+        }
+
+        var Blue = function() {
+          var BlueStyle = {
+            height: 50,
+            width: 150,
+            backgroundColor: "blue",
+          }
+          return(
+            <h1 style={BlueStyle}>Blue</h1>
+          );
+        }
+
+        var Indigo = function() {
+          var IndigoStyle = {
+            height: 50,
+            width: 150,
+            backgroundColor: "indigo",
+          }
+          return(
+            <h1 style={IndigoStyle}>Indigo</h1>
+          );
+        }
+
+        var Violet = function() {
+          var VioletStyle = {
+            height: 50,
+            width: 150,
+            backgroundColor: "violet",
+          }
+          return(
+            <h1 style={VioletStyle}>Violet</h1>
+          );
+        }
+
+        ReactDOM.render(
+          <div>
+            <Red/>
+            <Orange/>
+            <Yellow/>
+            <Green/>
+            <Blue/>
+            <Indigo/>
+            <Violet/>
+          </div>,
+          document.getElementById("app")
+
+      );
+
+  </script>
+
+
+
+</body>
+</html>

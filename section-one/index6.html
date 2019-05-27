@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <!-- REACT DOM LIBRARY -->
+   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <title>Let's React!</title>
+</head>
+<body>
+  <!-- CONTENT-->
+  <div id="app">React has not rendered yet</div>
+  <!-- JAVASCRIPT-->
+  <script type="text/babel">
+    var destination = document.getElementById("app");
+    var what =
+    <div>
+    <h1>Headline 1</h1>
+    <h2>Headline 2</h2>
+    <h3>Headline 3</h3>
+    </div>
+
+    ReactDOM.render(
+    what,
+    destination
+  );
+
+  </script>
+</body>
+</html>

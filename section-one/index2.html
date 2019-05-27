@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <!-- REACT DOM LIBRARY -->
+   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <title>Let's React!</title>
+</head>
+<body>
+  <!-- CONTENT-->
+  <div id="app">React has not rendered yet</div>
+  <p id="par">React has not rendered yet</p>
+  <a href="" id="anchor">React has not rendered yet</a>
+  <ul id="list">React has not rendered yet</ul>
+  <!-- JAVASCRIPT-->
+  <script type="text/babel">
+    ReactDOM.render(
+    <h1>Hello World</h1>,
+    document.getElementById("app")
+  );
+  </script>
+  <script type="text/babel">
+    ReactDOM.render(
+    <p>I am a paragraph!</p>,
+    document.getElementById("par")
+  );
+  </script>
+  <script type="text/babel">
+    ReactDOM.render(
+    <a href="https://www.google.com">Visit Google</a>,
+    document.getElementById("anchor")
+  );
+  </script>
+  <script type="text/babel">
+    ReactDOM.render(
+    <ul>Todos today:
+    <li>Learn React</li>
+    <li>Go home</li>
+    <li>Sleep</li>
+    </ul>,
+    document.getElementById("list")
+  );
+  </script>
+</body>
+</html>
