@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <!-- REACT DOM LIBRARY -->
+   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <title>FriendLy</title>
+</head>
+<body>
+  <div id="app">React has not rendered yet</div>
+  <script type="text/babel">
+
+    function FriendLy() {
+      var friendlyStyle = {
+        height: 300,
+        width: 200,
+        padding: 0,
+        backgroundColor: "#FFF",
+        filter: "drop-shadow(0px 0px 5px #555)"
+      }
+      return(
+        <div style={friendlyStyle}>
+          <Avatar/>
+          <UserName/>
+          <GetConnected/>
+        </div>
+      );
+    }
+
+    function Avatar() {
+      var avatarStyle = {
+        marginLeft: 20,
+        marginTop: 20,
+        width: 150,
+        height: 150,
+        borderRadius: "50%"
+      }
+      return(
+        <img style={avatarStyle} src="https://i-cdn.embed.ly/1/display?key=fd92ebbc52fc43fb98f69e50e7893c13&url=https%3A%2F%2Fi.redd.it%2Fgisuto9wnxrz.jpg" alt="profile pic"/>
+      );
+    }
+
+    function UserName() {
+      var nameStyle = {
+        fontSize: 24,
+        fontFamily: "Arial, Helvetica, sans-serif",
+        margin: 20
+      }
+      return(
+        <h1 style={nameStyle}>Profile Name</h1>
+      );
+    }
+
+    function GetConnected() {
+      return(
+        <div>
+          <Like/>
+          <Share/>
+          <Add/>
+        </div>
+      );
+    }
+
+    var iconStyle = {
+      margin: 25
+    }
+
+    function Like() {
+      return(
+        <i style={iconStyle} className="fa fa-heart"></i>
+      );
+    }
+
+    function Share() {
+      return(
+        <i style={iconStyle} className="fa fa-share"></i>
+      );
+    }
+
+    function Add() {
+      return(
+        <i style={iconStyle} className="fa fa-user"></i>
+      );
+    }
+
+
+    ReactDOM.render(
+      <FriendLy/>,
+      document.getElementById("app")
+    );
+
+  </script>
+</body>
+</html>

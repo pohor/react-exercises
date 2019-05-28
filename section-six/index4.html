@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <!-- REACT DOM LIBRARY -->
+   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <title>Styling Components</title>
+</head>
+<body>
+  <div id="app">React has not rendered yet</div>
+
+  <script type="text/babel">
+
+    class Color extends React.Component {
+      render() {
+      var colorList = this.props.colors.map(function(color) {
+        var colorStyle = {
+          marginBottom: 20,
+          heigth: 100,
+          width: 200,
+          backgroundColor: color.name
+        }
+        return <div key={color.id} style={colorStyle}>{color.name}</div>
+      });
+      return(
+        <h1>{colorList}</h1>
+      );
+    }}
+
+    var colors = [{id: 1, color: "red", name: "red"}, {id: 2, color: "orange", name: "orange"},
+      {id: 3, color: "yellow", name: "yellow"}, {id: 4, color: "green", name: "green"},
+      {id: 5, color: "blue", name: "blue"}, {id: 6, color: "indigo", name: "indigo"},
+      {id: 7, color: "violet", name: "violet"}];
+
+    ReactDOM.render(
+      <Color colors={colors}/>,
+      document.getElementById("app")
+    );
+
+  </script>
+
+
+
+</body>
+</html>
