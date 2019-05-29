@@ -18,9 +18,13 @@
   <div id="app">React has not rendered yet</div>
   <script type="text/babel">
 
+
     function FriendLy(props) {
       var people = props.people;
-      var peopleItem = people.map(function(person) {
+
+      var malePeopleItem = people.filter(function(person) {
+        return person.gender === "male";
+      }).map(function(person) {
         var friendlyStyle = {
           display: "inline-block",
           margin: 20,
@@ -30,14 +34,43 @@
           backgroundColor: "#FFF",
           filter: "drop-shadow(0px 0px 5px #555)"
         };
-        return <div style={friendlyStyle}>
+        return <div key={person.id} style={friendlyStyle}>
+            <Avatar img={person.img}/>
+            <UserName name={person.name}/>
+            <GetConnected/>
+          </div>
+      });
+
+      var femalePeopleItem = people.filter(function(person) {
+        return person.gender == "female";
+      }).map(function(person) {
+        var friendlyStyle = {
+          display: "inline-block",
+          margin: 20,
+          height: 300,
+          width: 200,
+          padding: 0,
+          backgroundColor: "#FFF",
+          filter: "drop-shadow(0px 0px 5px #555)"
+        };
+        return <div key={person.id} style={friendlyStyle}>
             <Avatar img={person.img}/>
             <UserName name={person.name}/>
             <GetConnected/>
           </div>
       });
       return(
-        <div>{peopleItem}</div>
+        <div>
+          <h1>Females:</h1>
+          <div>
+            {femalePeopleItem}
+          </div>
+          <hr />
+          <h1>Males:</h1>
+          <div>
+            {malePeopleItem}
+          </div>
+        </div>
       );
     }
 
